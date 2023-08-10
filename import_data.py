@@ -16,6 +16,14 @@ def getForecast():
     response = requests.get(api_url)
     return response.json()
 
+def load_db(table,method,df):
+    
+    
+    pass
+
+
 forecast = getForecast()
 df = pd.json_normalize(forecast["list"], max_level=None)
-df
+df_e = df.explode("weather")
+df_e["weather.description"]=df_e["weather"].apply(lambda x: x["description"])
+df_f = df_e.drop(columns=["weather"])
