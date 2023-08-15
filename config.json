@@ -2,9 +2,9 @@
     "config" : {
         "API_URL_BASE":"https://api.openweathermap.org/data/2.5/forecast?lat=38.7167&lon=-9.1333&appid=",
         "API_KEY":"6be1f111f2d2b066e487376ac2d1e85e",
-        "DB_SERVER":"",
+        "DB_SERVER":"localhost",
         "DB_PORT":"5432",
-        "DB_USER":"admin",
+        "DB_USER":"postgres",
         "DB_PASS":"admin",
         "DB_NAME":"forecast",
         "REFERENCE": "https://openweathermap.org/"
